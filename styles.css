@@ -1,0 +1,166 @@
+:root {
+  --bg-color: #fef6f9;
+  --primary-color: #a3c4f3;
+  --accent-color: #f7d6e0;
+  --text-color: #333;
+  --highlight-color: #f9c6d0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.section {
+  padding: 4rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+h3 {
+  color: var(--accent-color);
+  margin-top: 1.5rem;
+}
+
+p, li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+ul.timeline {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+}
+
+ul.timeline li {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--primary-color);
+}
+
+header {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+  background-color: var(--highlight-color);
+  border-radius: 5px;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 60%;
+    display: none;
+    padding: 1rem;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--accent-color);
+  color: #333;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+section {
+  animation: fadeIn 1s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#contact a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+#contact a:hover {
+  color: var(--accent-color);
+}
